@@ -7,7 +7,7 @@ using System.Data;
 namespace API_Northwind.Controllers
 {
     [ApiController]
-    [Route("Northwind_API")]
+    [Route("Northwind_API/Region")]
     public class RegionController : ControllerBase
     {
         private readonly IConfiguration _configuration;
@@ -153,7 +153,7 @@ namespace API_Northwind.Controllers
 
         [HttpPost]
         [Route("DelRegion/{id}")]
-        public object Delete(string id)
+        public object Delete_Region(string id)
         {
             try
             {

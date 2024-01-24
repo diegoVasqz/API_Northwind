@@ -7,7 +7,7 @@ using System.Data;
 namespace API_Northwind.Controllers
 {
     [ApiController]
-    [Route("Northwind_API")]
+    [Route("Northwind_API/Report")]
 
     public class ReportController : ControllerBase
     {

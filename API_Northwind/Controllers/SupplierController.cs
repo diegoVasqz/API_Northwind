@@ -8,7 +8,7 @@ using System.Data;
 namespace API_Northwind.Controllers
 {
     [ApiController]
-    [Route("Northwind_API")]
+    [Route("Northwind_API/Supplier")]
     public class SupplierController : ControllerBase
     {
 
@@ -16,7 +16,7 @@ namespace API_Northwind.Controllers
         private DataMySQL _data_supplier;
 
         #region Name_StoredProcedures
-        public readonly string _getRegionList = "GETRegionList";
+        public readonly string _getSupplierList = "GETSupplierList";
         public readonly string _Ups_Ins_Supplier = "UPS_INS_SUPPLIER";
         public readonly string _Ups_Upd_Supplier = "UPS_UPD_SUPPLIER";
         public readonly string _Ups_Del_Supplier = "UPS_DEL_SUPPLIER";
@@ -30,13 +30,13 @@ namespace API_Northwind.Controllers
 
 
         [HttpGet]
-        [Route("ListRegion")]
-        public object GetRegionList()
+        [Route("ListSupplier")]
+        public object GetSupplierList()
         {
             try {
 
                 _data_supplier = new DataMySQL(_configuration);
-                DataTable dtData = _data_supplier.ExecuteGet(_getRegionList);
+                DataTable dtData = _data_supplier.ExecuteGet(_getSupplierList);
 
                 if (dtData.Rows != null)
                 {
@@ -172,7 +172,7 @@ namespace API_Northwind.Controllers
 
         [HttpPost]
         [Route("DelSupplier/{id}")]
-        public dynamic Delete(string id)
+        public dynamic DeleteSupplier(string id)
         {
             try 
             {

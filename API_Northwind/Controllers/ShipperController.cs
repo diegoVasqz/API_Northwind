@@ -8,7 +8,7 @@ using System.Data;
 namespace API_Northwind.Controllers
 {
     [ApiController]
-    [Route("Northwind_API")]
+    [Route("Northwind_API/Shipper")]
 
     public class ShipperController : ControllerBase
     {
@@ -161,7 +161,7 @@ namespace API_Northwind.Controllers
 
         [HttpPost]
         [Route("DelShipper/{id}")]
-        public object Delete(string id)
+        public object Delete_Shipper(string id)
         {
             try
             {

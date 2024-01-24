@@ -7,6 +7,8 @@ using System.Data;
 
 namespace API_Northwind.Controllers
 {
+    [ApiController]
+    [Route("Northwind_API")]
     public class SupplierController : ControllerBase
     {
 
